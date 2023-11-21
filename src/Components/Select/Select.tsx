@@ -3,7 +3,7 @@ import { SelectComponent } from "./Select.styled";
 import { sizeVariants } from "../SharedStyles/sizeVariants";
 import { roundedVariants } from "../SharedStyles/roundedVariants";
 
-const Select = ({
+export const Select = ({
   size,
   rounded,
   options,
@@ -17,5 +17,3 @@ const Select = ({
 }) => {
   return <SelectComponent size={size} rounded={rounded} options={options} />;
 };
-
-export default Select;

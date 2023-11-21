@@ -10,7 +10,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   errors?: string;
 }
 
-const Input = ({
+export const Input = ({
   onChange,
   sizeStyle = "base",
   rounded = "none",
@@ -29,5 +29,3 @@ const Input = ({
     </>
   );
 };
-
-export default Input;

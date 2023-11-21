@@ -13,7 +13,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: () => void;
 }
 
-const Button = React.forwardRef(
+export const Button = React.forwardRef(
   (
     { color, size, rounded, children, onClick, ...props }: ButtonProps,
     ref: Ref<HTMLButtonElement>
@@ -33,5 +33,3 @@ const Button = React.forwardRef(
     );
   }
 );
-
-export default Button;

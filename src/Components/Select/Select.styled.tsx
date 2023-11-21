@@ -1,10 +1,10 @@
 import React from "react";
 import * as Select from "@radix-ui/react-select";
-import { styled } from "@stitches/react";
 import GlobalCSS from "../../Styles/GlobalStyle";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { sizeVariants } from "../SharedStyles/sizeVariants";
 import { roundedVariants } from "../SharedStyles/roundedVariants";
+import { styled } from "../../Config/stitches.config";
 
 const SelectParent = styled("div", {
   position: "relative",

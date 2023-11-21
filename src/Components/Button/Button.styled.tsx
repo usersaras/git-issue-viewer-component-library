@@ -1,4 +1,4 @@
-import { styled } from "../../../stitches.config";
+import { styled } from "../../Config/stitches.config";
 import { colorVariants } from "../SharedStyles/colorVariants";
 import { roundedVariants } from "../SharedStyles/roundedVariants";
 import { sizeVariants } from "../SharedStyles/sizeVariants";
