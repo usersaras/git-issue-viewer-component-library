@@ -1,4 +1,5 @@
 import { createStitches } from "@stitches/react";
+import type * as Stitches from "@stitches/react";
 
 export const { styled } = createStitches({
   theme: {
@@ -70,6 +71,9 @@ export const { styled } = createStitches({
       4: "32px",
       5: "64px",
       6: "128px",
+      7: "256px",
+      8: "512px",
+      full: "100%",
     },
     radii: {
       1: "2px",
@@ -97,5 +101,13 @@ export const { styled } = createStitches({
     shadows: {},
     zIndices: {},
     transitions: {},
+  },
+  utils: {
+    minWid: (value: string) => ({
+      minWidth: value,
+    }),
+    maxWid: (value: string) => ({
+      maxWidth: value,
+    }),
   },
 });
