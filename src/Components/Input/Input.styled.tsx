@@ -1,9 +1,8 @@
-import { styled } from "@stitches/react";
 import { sizeVariants } from "../SharedStyles/sizeVariants";
 import { roundedVariants } from "../SharedStyles/roundedVariants";
+import { styled } from "../../Config/stitches.config";
 
 const globalInputStyles = {
-  width: "100%",
   padding: "8px",
   border: `1px solid $gray300`,
 };

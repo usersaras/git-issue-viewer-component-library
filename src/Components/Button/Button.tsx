@@ -10,7 +10,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size: keyof typeof sizeVariants;
   rounded: keyof typeof roundedVariants;
   children: JSX.Element | string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const Button = React.forwardRef(

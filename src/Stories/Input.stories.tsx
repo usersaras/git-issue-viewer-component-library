@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Input } from "./Input";
+import { Input } from "../Components/Input/Input";
 
 type Story = StoryObj<typeof Input>;
 

@@ -1,19 +1,34 @@
 import React from "react";
 import { SelectComponent } from "./Select.styled";
-import { sizeVariants } from "../SharedStyles/sizeVariants";
-import { roundedVariants } from "../SharedStyles/roundedVariants";
+import { SizeVariantsPropType } from "../SharedStyles/sizeVariants";
+import { RoundedVariantsPropType } from "../SharedStyles/roundedVariants";
+
+export interface SelectProps {
+  size: SizeVariantsPropType;
+  options: { value: string; label: string | JSX.Element }[];
+  rounded: RoundedVariantsPropType;
+  minWidth?: string;
+  maxWidth?: string;
+  placeholder?: string;
+}
 
 export const Select = ({
   size,
   rounded,
   options,
-}: {
-  size: keyof typeof sizeVariants;
-  rounded: keyof typeof roundedVariants;
-  options: {
-    label: string | JSX.Element;
-    value: string;
-  }[];
-}) => {
-  return <SelectComponent size={size} rounded={rounded} options={options} />;
+  minWidth,
+  maxWidth = "3",
+  placeholder,
+}: SelectProps) => {
+  const maxWid = maxWidth ? `$sizes$${maxWidth}` : "$sizes$6";
+  return (
+    <SelectComponent
+      size={size}
+      rounded={rounded}
+      options={options}
+      placeholder={placeholder}
+      minWidth={minWidth || maxWid}
+      maxWidth={maxWid}
+    />
+  );
 };

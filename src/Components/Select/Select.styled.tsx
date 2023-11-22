@@ -5,6 +5,7 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { sizeVariants } from "../SharedStyles/sizeVariants";
 import { roundedVariants } from "../SharedStyles/roundedVariants";
 import { styled } from "../../Config/stitches.config";
+import { SelectProps } from "./Select";
 
 const SelectParent = styled("div", {
   position: "relative",
@@ -20,8 +21,10 @@ const SelectTrigger = styled(
     justifyContent: "space-between",
     gap: "4px",
     padding: "8px",
-    border: `1px solid $gray500`,
-    width: "100px",
+    border: `1px solid $gray300`,
+    background: "transparent",
+    minWid: "$$minWid",
+    maxWid: "$$maxWid",
   },
   {
     variants: {
@@ -37,7 +40,10 @@ const SelectValue = styled(Select.Value, {
   whiteSpace: "nowrap",
 });
 
-const SelectContent = styled(Select.Content, {});
+const SelectContent = styled(Select.Content, {
+  minWid: "$$minWid",
+  maxWid: "$$maxWid",
+});
 
 const SelectViewport = styled(
   Select.Viewport,
@@ -62,7 +68,7 @@ const SelectItem = styled(Select.Item, {
   padding: "4px 8px",
   outline: "none",
 
-  "&:hover": {
+  "&[data-highlighted]": {
     background: "$gray200",
     outline: "none",
     borderRadius: "4px",
@@ -74,16 +80,22 @@ const ComponentToRender = ({
   size,
   options,
   rounded,
-}: {
-  size: keyof typeof sizeVariants;
-  options: { value: string; label: string | JSX.Element }[];
-  rounded: keyof typeof roundedVariants;
-}) => {
+  minWidth,
+  maxWidth,
+  placeholder,
+}: SelectProps) => {
   GlobalCSS();
   return (
     <SelectParent>
       <SelectRoot>
-        <SelectTrigger size={size} rounded={rounded}>
+        <SelectTrigger
+          size={size}
+          rounded={rounded}
+          css={{
+            $$minWid: minWidth || maxWidth,
+            $$maxWid: maxWidth,
+          }}
+        >
           <p
             style={{
               textOverflow: "ellipsis",
@@ -91,12 +103,18 @@ const ComponentToRender = ({
               whiteSpace: "nowrap",
             }}
           >
-            <SelectValue placeholder="Select" />
+            <SelectValue placeholder={placeholder || "Select"} />
           </p>
           <Select.Icon asChild={true} children={<ChevronDownIcon />} />
         </SelectTrigger>
 
-        <SelectContent position="popper">
+        <SelectContent
+          position="popper"
+          css={{
+            $$minWid: minWidth || maxWidth,
+            $$maxWid: maxWidth,
+          }}
+        >
           <SelectViewport size={size} rounded={rounded}>
             {options.map((option, index) => {
               return (

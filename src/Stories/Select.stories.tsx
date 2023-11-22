@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Select } from "./Select";
+import { Select } from "../Components/Select/Select";
 
 type Story = StoryObj<typeof Select>;
 
@@ -13,6 +13,9 @@ export const BasicSelect: Story = {
       { label: "label2", value: "value2" },
       { label: "label3", value: "value3" },
     ],
+    placeholder: "Hey",
+    maxWidth: "",
+    minWidth: "",
   },
 };
 
