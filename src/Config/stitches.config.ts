@@ -1,5 +1,4 @@
 import { createStitches } from "@stitches/react";
-import type * as Stitches from "@stitches/react";
 
 export const { styled } = createStitches({
   theme: {
@@ -108,6 +107,21 @@ export const { styled } = createStitches({
     }),
     maxWid: (value: string) => ({
       maxWidth: value,
+    }),
+    rowStart: (value: string) => ({
+      gridRowStart: value,
+    }),
+    rowEnd: (value: string) => ({
+      gridRowEnd: value,
+    }),
+    columns: (value: string) => ({
+      gridTemplateColumns: value,
+    }),
+    rows: (value: string) => ({
+      gridTemplateColumns: value,
+    }),
+    g: (value: string) => ({
+      gap: value,
     }),
   },
 });
