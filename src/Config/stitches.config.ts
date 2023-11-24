@@ -123,5 +123,14 @@ export const { styled } = createStitches({
     g: (value: string) => ({
       gap: value,
     }),
+    flexAlign: (value: string) => ({
+      alignItems: value,
+    }),
+    flexJustify: (value: string) => ({
+      justifyContent: value,
+    }),
+    direction: (value: string) => ({
+      flexDirection: value,
+    }),
   },
 });
