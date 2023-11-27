@@ -1,5 +1,5 @@
-import { sizeVariants } from "../SharedStyles/sizeVariants";
-import { roundedVariants } from "../SharedStyles/roundedVariants";
+import { sizeVariants } from "../../Config/SharedStyles/sizeVariants";
+import { roundedVariants } from "../../Config/SharedStyles/roundedVariants";
 import { styled } from "../../Config/stitches.config";
 
 const globalInputStyles = {

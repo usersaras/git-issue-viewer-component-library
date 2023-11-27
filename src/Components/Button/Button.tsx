@@ -1,9 +1,9 @@
 import React, { ButtonHTMLAttributes, Ref } from "react";
 import { Button as StyledButton } from "./Button.styled";
 import GlobalCSS from "../../Styles/GlobalStyle";
-import { colorVariants } from "../SharedStyles/buttonColorVariants";
-import { sizeVariants } from "../SharedStyles/sizeVariants";
-import { roundedVariants } from "../SharedStyles/roundedVariants";
+import { colorVariants } from "../../Config/SharedStyles/buttonColorVariants";
+import { sizeVariants } from "../../Config/SharedStyles/sizeVariants";
+import { roundedVariants } from "../../Config/SharedStyles/roundedVariants";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color: keyof typeof colorVariants;

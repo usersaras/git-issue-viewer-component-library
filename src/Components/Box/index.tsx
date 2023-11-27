@@ -1,9 +1,10 @@
 import React from "react";
 import { BoxWrapper } from "./Box.styled";
-import { SizeVariantsPropType } from "../SharedStyles/sizeVariants";
-import { BgColorVariantsPropType } from "../SharedStyles/backgroundColorVariants";
-import { BorderVariantsPropType } from "../SharedStyles/borderVariants";
-import { RoundedVariantsPropType } from "../SharedStyles/roundedVariants";
+import { SizeVariantsPropType } from "../../Config/SharedStyles/sizeVariants";
+import { BgColorVariantsPropType } from "../../Config/SharedStyles/backgroundColorVariants";
+import { BorderVariantsPropType } from "../../Config/SharedStyles/borderVariants";
+import { RoundedVariantsPropType } from "../../Config/SharedStyles/roundedVariants";
+import GlobalCSS from "../../Styles/GlobalStyle";
 
 interface BoxProps {
   size?: SizeVariantsPropType;
@@ -20,6 +21,7 @@ export const Box = ({
   border,
   rounded,
 }: BoxProps) => {
+  GlobalCSS();
   return (
     <BoxWrapper
       size={size}

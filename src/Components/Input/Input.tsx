@@ -1,7 +1,7 @@
 import React, { InputHTMLAttributes } from "react";
 import { StyledInput } from "./Input.styled";
-import { sizeVariants } from "../SharedStyles/sizeVariants";
-import { roundedVariants } from "../SharedStyles/roundedVariants";
+import { sizeVariants } from "../../Config/SharedStyles/sizeVariants";
+import { roundedVariants } from "../../Config/SharedStyles/roundedVariants";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   sizeStyle?: keyof typeof sizeVariants;

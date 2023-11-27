@@ -1,7 +1,7 @@
 import { styled } from "../../Config/stitches.config";
-import { colorVariants } from "../SharedStyles/buttonColorVariants";
-import { roundedVariants } from "../SharedStyles/roundedVariants";
-import { sizeVariants } from "../SharedStyles/sizeVariants";
+import { colorVariants } from "../../Config/SharedStyles/buttonColorVariants";
+import { roundedVariants } from "../../Config/SharedStyles/roundedVariants";
+import { sizeVariants } from "../../Config/SharedStyles/sizeVariants";
 
 export const globalButtonStyles = {
   cursor: "pointer",

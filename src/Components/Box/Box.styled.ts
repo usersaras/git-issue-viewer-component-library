@@ -1,8 +1,8 @@
 import { styled } from "../../Config/stitches.config";
-import { bgColorVariants } from "../SharedStyles/backgroundColorVariants";
-import { borderVariants } from "../SharedStyles/borderVariants";
-import { roundedVariants } from "../SharedStyles/roundedVariants";
-import { sizeVariants } from "../SharedStyles/sizeVariants";
+import { bgColorVariants } from "../../Config/SharedStyles/backgroundColorVariants";
+import { borderVariants } from "../../Config/SharedStyles/borderVariants";
+import { roundedVariants } from "../../Config/SharedStyles/roundedVariants";
+import { sizeVariants } from "../../Config/SharedStyles/sizeVariants";
 
 export const BoxWrapper = styled(
   "div",

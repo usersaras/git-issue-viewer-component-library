@@ -1,7 +1,7 @@
 import React from "react";
 import { SelectComponent } from "./Select.styled";
-import { SizeVariantsPropType } from "../SharedStyles/sizeVariants";
-import { RoundedVariantsPropType } from "../SharedStyles/roundedVariants";
+import { SizeVariantsPropType } from "../../Config/SharedStyles/sizeVariants";
+import { RoundedVariantsPropType } from "../../Config/SharedStyles/roundedVariants";
 
 export interface SelectProps {
   size: SizeVariantsPropType;

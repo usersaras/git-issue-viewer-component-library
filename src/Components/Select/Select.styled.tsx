@@ -2,8 +2,8 @@ import React from "react";
 import * as Select from "@radix-ui/react-select";
 import GlobalCSS from "../../Styles/GlobalStyle";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
-import { sizeVariants } from "../SharedStyles/sizeVariants";
-import { roundedVariants } from "../SharedStyles/roundedVariants";
+import { sizeVariants } from "../../Config/SharedStyles/sizeVariants";
+import { roundedVariants } from "../../Config/SharedStyles/roundedVariants";
 import { styled } from "../../Config/stitches.config";
 import { SelectProps } from "./Select";
 
