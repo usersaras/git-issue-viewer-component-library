@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes, Ref } from "react";
 import { Button as StyledButton } from "./Button.styled";
 import GlobalCSS from "../../Styles/GlobalStyle";
-import { colorVariants } from "../SharedStyles/colorVariants";
+import { colorVariants } from "../SharedStyles/buttonColorVariants";
 import { sizeVariants } from "../SharedStyles/sizeVariants";
 import { roundedVariants } from "../SharedStyles/roundedVariants";
 

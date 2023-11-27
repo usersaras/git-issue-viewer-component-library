@@ -7,8 +7,6 @@ interface GridChildProps {
   rowEnd?: string;
 }
 
-const GridChild = ({ children, rowStart, rowEnd }: GridChildProps) => {
+export const GridChild = ({ children, rowStart, rowEnd }: GridChildProps) => {
   return <Child css={{ $$rs: rowStart, $$re: rowEnd }}>{children}</Child>;
 };
-
-export default GridChild;

@@ -1,6 +1,5 @@
 import React from "react";
 import { BoxWrapper } from "./Box.styled";
-import { Flex } from "../Flex";
 import { SizeVariantsPropType } from "../SharedStyles/sizeVariants";
 import { BgColorVariantsPropType } from "../SharedStyles/backgroundColorVariants";
 import { BorderVariantsPropType } from "../SharedStyles/borderVariants";

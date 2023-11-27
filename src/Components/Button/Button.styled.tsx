@@ -1,5 +1,5 @@
 import { styled } from "../../Config/stitches.config";
-import { colorVariants } from "../SharedStyles/colorVariants";
+import { colorVariants } from "../SharedStyles/buttonColorVariants";
 import { roundedVariants } from "../SharedStyles/roundedVariants";
 import { sizeVariants } from "../SharedStyles/sizeVariants";
 
